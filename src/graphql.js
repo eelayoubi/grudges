@@ -13,13 +13,11 @@ export const ListGrudges = `
 
 export const CreateGrudge = `
   mutation CreateGrudge(
-    $id: ID!
     $person: String!
     $deed: String!
     $avenged: Boolean!
   ) {
-    createGrudge(input: {
-      id: $id,
+    createGrudges(input: {
       person: $person,
       deed: $deed,
       avenged: $avenged
