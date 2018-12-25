@@ -26,7 +26,11 @@ class Application extends Component {
   }
 
   addGrudge = grudge => {
-    API.graphql(graphqlOperation(CreateGrudge, grudge));
+    API.graphql(graphqlOperation(CreateGrudge, grudge))
+      .then(response => {
+        const newGrudge = response.data.CreateGrudge;
+        this.setState({ grudges: [grudge, ...this.state.grudges] });
+      })
   };
 
   removeGrudge = grudge => {
