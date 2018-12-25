@@ -19,7 +19,7 @@ class Application extends Component {
 
     API.graphql(graphqlOperation(SubscribeToNewGrudge)).subscribe({
       next: response => {
-        const grudge = response.value.data.onCreateGrudge;
+        const grudge = response.value.data.onCreateGrudges;
         this.setState({ grudges: [grudge, ...this.state.grudges] });
       },
     });
