@@ -31,8 +31,8 @@ export const CreateGrudge = `
 `;
 
 export const SubscribeToNewGrudge = `
-  subscription SubscribeToNewGrudges {
-    onCreateGrudge {
+  subscription onCreateGrudges {
+    onCreateGrudges {
       id
       person
       deed
